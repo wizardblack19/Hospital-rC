@@ -69,9 +69,16 @@
 		setTimeout('document.location.reload()',2000);}
 	}
 
+	
+
+
+
+	
+	
 	</script>
 		
-		
+	
+	
 	</head>
 	<body>
 
@@ -179,7 +186,7 @@
                                 </div>
 
 								<div class="form-actions text-right">
-									<input type="button" value="Historial de Credito" onclick="datag()" class="btn btn-primary">
+									<a href="./hcredito.php?id=<?php echo $_GET['id']; ?>"><input type="button" value="Historial de Credito" class="btn btn-primary"></a>
 									<input type="button" value="Abonar Cuenta" onclick="datag()" class="btn btn-primary">
 								</div>
 								
