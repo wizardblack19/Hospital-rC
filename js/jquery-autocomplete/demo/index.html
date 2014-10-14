@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>jQuery Autocomplete Plugin</title>
+<script type="text/javascript" src="../lib/jquery.js"></script>
+
+<script type='text/javascript' src='../jquery.autocomplete.js'></script>
+<script type='text/javascript' src='localdata.js'></script>
+<link rel="stylesheet" type="text/css" href="main.css" />
+<link rel="stylesheet" type="text/css" href="../jquery.autocomplete.css" />
+
+	
+<script type="text/javascript">
+$().ready(function() {
+
+	function log(event, data, formatted) {
+		$("<li>").html( !data ? "No match!" : "Selected: " + formatted).appendTo("#result");
+	}
+	
+	function formatItem(row) {
+		return row[0] + " (<strong>id: " + row[1] + "</strong>)";
+	}
+	function formatResult(row) {
+		return row[0].replace(/(<.+?>)/gi, '');
+	}
+	
+	$("#suggest1").focus().autocomplete(cities);
+
+	
+
+	
+	
+
+	
+	
+	
+
+	
+
+	
+	
+	$("#clear").click(function() {
+		$(":input").unautocomplete();
+	});
+});
+
+
+
+
+
+</script>
+	
+</head>
+
+<body>
+
+<div id="content">
+	
+	<form autocomplete="off">
+		<p>
+			<label>Single City (local):</label>
+			<input type="text" id="suggest1" />
+		</p>
+
+
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+		
+		<input type="submit" value="Submit" />
+	</form>
+	
+
+	
+		
+
+	<h3>Result:</h3> <ol id="result"></ol>
+
+</div>
+
+
+</body>
+</html>
